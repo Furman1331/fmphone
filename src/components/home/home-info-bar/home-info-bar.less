@@ -1,0 +1,43 @@
+@import "../../../styles/mixins.less";
+
+.home-info-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 24px;
+  width: 88%;
+  color: #fff;
+  font-weight: 700;
+  padding-inline: 20px;
+  padding-top: 10px;
+
+  &__wrapper {
+    display: flex;
+  }
+
+  &__time {
+    padding-left: 5px;
+  }
+
+  &__battery {
+    margin-bottom: 2px;
+    &::before {
+      .icon-battery-white(16px);
+      content: "";
+    }
+  }
+
+  &__reach {
+    padding-right: 5px;
+    margin-bottom: 5px;
+    &::before {
+      .icon-reach-white(16px);
+      content: "";
+    }
+  }
+
+  &__conntection {
+    font-size: 12px;
+    padding-right: 5px;
+  }
+}

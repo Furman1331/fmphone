@@ -1,0 +1,43 @@
+@import "../../../styles/mixins.less";
+
+.home-common-apps {
+  width: 100%;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    width: 80%;
+    border-radius: 20px;
+    background-color: rgba(0,0,0,0.8);
+    padding-inline: 20px;
+    padding-top: 20px;
+  }
+}
+
+.icon {
+  &__messages {
+    &::before {
+      .icon-messages(65px);
+      content: "";
+    }
+  }
+
+  &__phone {
+    &::before {
+      .icon-phone(65px);
+      content: "";
+    }
+  }
+
+  &__safari {
+    &::before {
+      .icon-safari(65px);
+      content: "";
+    }
+  }
+}
