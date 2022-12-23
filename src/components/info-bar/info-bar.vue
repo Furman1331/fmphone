@@ -1,5 +1,5 @@
-<template lang="pug" src="./home-info-bar.pug" />
-<style lang="less" src="./home-info-bar.less" scoped />
+<template lang="pug" src="./info-bar.pug" />
+<style lang="less" src="./info-bar.less" scoped />
 <script lang="ts">
 import { defineComponent } from 'vue';
 

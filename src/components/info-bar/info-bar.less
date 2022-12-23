@@ -1,6 +1,9 @@
-@import "../../../styles/mixins.less";
+@import "../../styles/mixins.less";
 
-.home-info-bar {
+.info-bar {
+  position: absolute;
+  top: 10px;
+  z-index: 3;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -9,7 +12,6 @@
   color: #fff;
   font-weight: 700;
   padding-inline: 20px;
-  padding-top: 10px;
 
   &__wrapper {
     display: flex;

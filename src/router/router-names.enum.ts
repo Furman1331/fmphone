@@ -1,5 +1,6 @@
 export enum RouteName {
     home = "home",
 
-    phone = "phone"
+    contact = "contact",
+    contactLast = "contact:last"
 }
