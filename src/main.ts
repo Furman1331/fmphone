@@ -1,6 +1,7 @@
 import { createApp } from 'vue';
 import { createPinia } from 'pinia';
 
+//@ts-ignore
 import App from './app.vue';
 import router from './router';
 

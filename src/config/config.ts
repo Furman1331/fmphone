@@ -1,4 +1,5 @@
 import { config } from "./phones/iphone";
+// import { config } from "./phones/samsung";
 
 export interface PhoneConfig {
     frameImage: string;
