@@ -3,5 +3,7 @@ export enum RouteName {
 
     contact = "contact",
     contactLast = "contact:last",
-    contactList = "contact:list"
+    contactList = "contact:list",
+    contactKeyboard = "contact:keyboard",
+    contactFavourite = "contact:favourite",
 }
