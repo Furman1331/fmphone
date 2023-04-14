@@ -1,6 +1,7 @@
 <template lang="pug" src="./info-bar.pug" />
-<style lang="less" src="./info-bar.less" scoped />
 <script lang="ts">
+import importStyle from "@/utils/import-style";
+
 import { defineComponent } from 'vue';
 
 import { DateTime } from "luxon";
@@ -11,6 +12,8 @@ interface Data {
 }
 
 export default defineComponent({
+    name: 'info-bar',
+    extends: importStyle,
     data(): Data {
         return {
             interval: null,

@@ -1,21 +1,23 @@
 <template lang="pug" src="./home.pug" />
-<style lang="less" src="./home.less" scoped />
 <script lang="ts">
 import { defineComponent } from 'vue';
 
 import HomeCommonApps from "@/components/home/home-common-apps/home-common-apps.vue";
 
-import { phoneConfig } from '@config/config';
+import { config } from '@config/config';
+import importStyle from '@/utils/import-style';
 
 export default defineComponent({
+    name: 'home',
+    extends: importStyle,
     data() {
         return {
-            phoneConfig,
+            config,
         }
     },
     computed: {
         backgroundImage() {
-            return this.phoneConfig.backgroundImage;
+            return this.config.backgroundImage;
         }
     },
     components: { HomeCommonApps }

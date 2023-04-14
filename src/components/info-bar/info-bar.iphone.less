@@ -1,4 +1,4 @@
-@import "../../styles/mixins.less";
+@import "../../styles/mixins.iphone.less";
 
 .info-bar {
   position: absolute;
@@ -13,25 +13,28 @@
   font-weight: 700;
   padding-inline: 20px;
 
-  &__wrapper {
+  &__icon__wrapper {
     display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    margin-right: -2px;
   }
 
   &__time {
     padding-left: 5px;
+    margin-bottom: 10px;
   }
 
   &__battery {
-    margin-bottom: 2px;
+    margin-bottom: -1px;
     &::before {
-      .icon-battery-white(16px);
+      .icon-battery-white(20px);
       content: "";
     }
   }
 
   &__reach {
     padding-right: 5px;
-    margin-bottom: 5px;
     &::before {
       .icon-reach-white(16px);
       content: "";
@@ -41,5 +44,6 @@
   &__conntection {
     font-size: 12px;
     padding-right: 5px;
+    margin-bottom: 2px;
   }
 }

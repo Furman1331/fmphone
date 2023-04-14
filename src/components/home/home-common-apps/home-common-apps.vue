@@ -1,9 +1,10 @@
 <template lang="pug" src="./home-common-apps.pug" />
-<style lang="less" src="./home-common-apps.less" scoped />
 <script lang="ts">
-import { defineComponent } from 'vue'
+import importStyle from '@/utils/import-style';
 
-export default defineComponent({
-})
+export default {
+    name: 'home-common-apps',
+    extends: importStyle,
+}
 </script>
 

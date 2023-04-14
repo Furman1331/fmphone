@@ -1,26 +1,17 @@
-@import "../../styles/mixins.less";
+@import "../../styles/mixins.iphone.less";
 @import "../../styles/variables.less";
 
 .contact {
   width: 100%;
-  height: 100%;
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   background-color: @color-black;
+  padding-top: 3rem;
 
-  &__nav {
-    height: 50px;
-    width: 100%;
-    padding-inline: 10px;
-    padding-top: 3rem;
-
-    &__back {
-      display: flex;
-      align-items: center;
-      color: @color-blue;
-      font-weight: 700;
-    }
+  &__wrapper {
+    height: 100%;
   }
 
   &__menu {
@@ -36,6 +27,11 @@
       flex-direction: column;
       align-items: center;
       color: @color-grey-2;
+      cursor: pointer;
+
+      &__text {
+        font-size: 12px;
+      }
     }
 
     &__item-selected {
@@ -49,6 +45,7 @@
     &::before {
       .icon-clock-grey();
       content: "";
+      margin-bottom: 3px;
     }
   }
 
@@ -56,6 +53,7 @@
     &::before {
       .icon-clock-blue();
       content: "";
+      margin-bottom: 3px;
     }
   }
 
@@ -63,6 +61,7 @@
     &::before {
       .icon-keyboard-grey();
       content: "";
+      margin-bottom: 3px;
     }
   }
 
@@ -70,6 +69,15 @@
     &::before {
       .icon-avatar-grey();
       content: "";
+      margin-bottom: 3px;
+    }
+  }
+
+  &__avatar-selected {
+    &::before {
+      .icon-avatar-blue();
+      content: "";
+      margin-bottom: 3px;
     }
   }
 
@@ -78,6 +86,15 @@
       .icon-arrow-left-blue(16px);
       content: "";
       margin-right: 5px;
+    }
+  }
+
+  &__star {
+    &::before {
+      .icon-star-grey(28px);
+      content: "";
+      margin-right: 5px;
+      margin-top: -2px;
     }
   }
 }

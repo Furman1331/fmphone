@@ -1,10 +1,13 @@
-import { config } from "./phones/iphone";
+import { IPHONE_CONFIG } from "./phones/iphone";
 // import { config } from "./phones/samsung";
 
+export type PhoneTypes = "IPHONE" | "SAMSUNG";
+export type PhoneTypesLower = "iphone" | "samsung";
+
 export interface PhoneConfig {
+    type: PhoneTypes;
     frameImage: string;
     backgroundImage: string
 }
-// TODO: add selecting phone config depends on which phone we are using.
 
-export const phoneConfig = config;
+export const config = IPHONE_CONFIG;

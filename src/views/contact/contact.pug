@@ -1,14 +1,16 @@
 .contact
-    .contact__nav
-        .contact__nav__back.icon__back(@click="backToHome") Wstecz
-    router-view
+    .contact__wrapper
+        router-view
     .contact__menu
-        .contact__menu__item(:class="{'contact__menu__item-selected': isSelected(RouteName.contactLast)}")
-            i.contact__menu__item__icon(:class="{'icon__clock-blue': isSelected(RouteName.contactLast)}").icon__clock
-            span.contact__menu__item__text Ostatnie
         .contact__menu__item
-            i.contact__menu__item__icon.icon__avatar
-            span.contact__menu__item__text Kontakty
+            i.contact__menu__item__icon.icon__star
+            span.contact__menu__item__text {{ $t("contact.navigation.favourite") }}
+        .contact__menu__item(@click="$router.push({ name: RouteName.contactLast })" :class="{'contact__menu__item-selected': currentRouteName == RouteName.contactLast}")
+            i.contact__menu__item__icon.icon__clock(:class="{'icon__clock-blue': currentRouteName == RouteName.contactLast}")
+            span.contact__menu__item__text {{ $t("contact.navigation.last") }}
+        .contact__menu__item(@click="$router.push({ name: RouteName.contactList })" :class="{'contact__menu__item-selected': currentRouteName == RouteName.contactList}")
+            i.contact__menu__item__icon.icon__avatar(:class="{'icon__avatar-selected': currentRouteName == RouteName.contactList }")
+            span.contact__menu__item__text {{ $t("contact.navigation.list") }}
         .contact__menu__item
             i.contact__menu__item__icon.icon__keyboard
-            span.contact__menu__item__text Przyciski
+            span.contact__menu__item__text {{ $t("contact.navigation.keyboard") }}

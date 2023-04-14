@@ -1,23 +1,24 @@
 <template lang="pug" src="./app.pug" />
-<style lang="less" src="./app.less" scoped />
 <script lang="ts">
-import { defineComponent } from 'vue';
+import importStyle from "./utils/import-style";
 
 import InfoBar from './components/info-bar/info-bar.vue';
 
-import { phoneConfig } from './config/config';
+import { config, type PhoneTypesLower } from './config/config';
 
-export default defineComponent({
+export default {
+    name: "app",
+    extends: importStyle,
     data() {
         return {
-            phoneConfig
+            config
         }
     },
     computed: {
         frameImage() {
-            return this.phoneConfig.frameImage;
+            return this.config.frameImage;
         }
     },
     components: { InfoBar }
-})
+}
 </script>
