@@ -1,6 +1,9 @@
 <template lang="pug" src="./contact-favourite.pug" />
 <script lang="ts">
-export default {
+import importStyle from '@/utils/import-style';
 
+export default {
+    name: "contact-favourite",
+    extends: importStyle
 }
 </script>

@@ -1,2 +1,8 @@
 .contact-keyboard
-    h1.contact-keyboard__title {{ $t("contact.keyboard.title") }}
+    .contact-keyboard__value
+    .contact-keyboard__wrapper
+        .contact-keyboard__buttons
+            button.contact-keyboard__button(v-for="key in keys" @click="insert(key.value)") {{ key.value }}
+        .contact-keyboard__button-call__wrapper
+            button.contact-keyboard__button-call
+                i.icon__phone

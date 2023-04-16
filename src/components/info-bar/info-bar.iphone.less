@@ -2,33 +2,31 @@
 
 .info-bar {
   position: absolute;
-  top: 10px;
+  top: 22px;
   z-index: 3;
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 24px;
-  width: 88%;
+  width: 100%;
   color: #fff;
   font-weight: 700;
-  padding-inline: 20px;
 
   &__icon__wrapper {
     display: flex;
     align-items: center;
-    margin-bottom: 8px;
-    margin-right: -2px;
+    padding-right: 40px;
   }
 
   &__time {
-    padding-left: 5px;
-    margin-bottom: 10px;
+    font-size: 20px;
+    padding-left: 40px;
   }
 
   &__battery {
     margin-bottom: -1px;
     &::before {
-      .icon-battery-white(20px);
+      .icon-battery-white(28px);
       content: "";
     }
   }
@@ -36,13 +34,14 @@
   &__reach {
     padding-right: 5px;
     &::before {
-      .icon-reach-white(16px);
+      .icon-reach-white(20px);
       content: "";
+      margin-bottom: -3px;
     }
   }
 
   &__conntection {
-    font-size: 12px;
+    font-size: 16px;
     padding-right: 5px;
     margin-bottom: 2px;
   }

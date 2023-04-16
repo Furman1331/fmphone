@@ -1,3 +1,6 @@
+@import "../../../styles/variables.less";
+@import "../../../styles/mixins.iphone.less";
+
 .contact-keyboard {
   height: 100%;
   color: #fff;
@@ -6,5 +9,66 @@
   &__title {
     margin-top: 0;
     padding-left: 1.25rem;
+  }
+
+  &__wrapper {
+    height: auto;
+    width: 100%;
+  }
+
+  &__value {
+    height: auto;
+    padding-block: 20px;
+  }
+
+  &__buttons {
+    width: 100%;
+    display: inline-grid;
+    justify-content: center;
+    grid-gap: 10px;
+    grid-template-columns: auto auto auto;
+  }
+
+  .button() {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    width: 60px;
+    padding: 50px;
+    border-radius: 50%;
+    font-size: 2rem;
+    border: none;
+  }
+
+  &__button {
+    .button();
+    background-color: @color-grey-2;
+    color: #fff;
+  }
+
+  &__button-call {
+    .button();
+    background-color: @color__success;
+    color: #fff;
+
+    &__wrapper {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin-top: 10px;
+    }
+  }
+}
+
+.icon {
+  &__phone {
+    &::before {
+      .icon-phone-white(42px);
+      content: "";
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
   }
 }

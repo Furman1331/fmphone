@@ -4,6 +4,8 @@ import importStyle from "./utils/import-style";
 
 import InfoBar from './components/info-bar/info-bar.vue';
 
+import PhoneNavigation from "@/components/phone-navigation/phone-navigation.vue";
+
 import { config, type PhoneTypesLower } from './config/config';
 
 export default {
@@ -19,6 +21,6 @@ export default {
             return this.config.frameImage;
         }
     },
-    components: { InfoBar }
+    components: { InfoBar, PhoneNavigation }
 }
 </script>
